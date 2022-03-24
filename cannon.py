@@ -71,9 +71,10 @@ def move():
     draw()
 
     for target in targets:
-        if not inside(target):
-            return
-
+        if not inside(target): #condicion para el balon salga de la ventana.
+            for target in targets:# for para cada target.
+                goto(target.x,target.y)#Regresar el balon a la poisicion "x" y "y"
+                dot(20,'blue') #dibujar el balon
     ontimer(move, 50)
 
 
